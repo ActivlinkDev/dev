@@ -783,6 +783,40 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiClientKeyClientKey extends Schema.CollectionType {
+  collectionName: 'client_keys';
+  info: {
+    singularName: 'client-key';
+    pluralName: 'client-keys';
+    displayName: 'Client-Key';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Client_Key: Attribute.String;
+    Client_Name: Attribute.String;
+    Client_Logo: Attribute.Media;
+    Client_Primary: Attribute.String;
+    Client_Button: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::client-key.client-key',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::client-key.client-key',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDeviceEntryDeviceEntry extends Schema.SingleType {
   collectionName: 'device_entries';
   info: {
@@ -917,6 +951,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::client-key.client-key': ApiClientKeyClientKey;
       'api::device-entry.device-entry': ApiDeviceEntryDeviceEntry;
       'api::locale-info.locale-info': ApiLocaleInfoLocaleInfo;
     }

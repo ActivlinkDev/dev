@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "client_keys",
+  "info": {
+    "singularName": "client-key",
+    "pluralName": "client-keys",
+    "displayName": "Client-Key"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Client_Key": {
+      "type": "string"
+    },
+    "Client_Name": {
+      "type": "string"
+    },
+    "Client_Logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Client_Primary": {
+      "type": "string"
+    },
+    "Client_Button": {
+      "type": "string"
+    }
+  }
+}
