@@ -800,7 +800,6 @@ export interface ApiClientKeyClientKey extends Schema.CollectionType {
     Client_Logo: Attribute.Media;
     Client_Primary: Attribute.String;
     Client_Button: Attribute.String;
-    Lang_Code: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -883,6 +882,7 @@ export interface ApiLocaleInfoLocaleInfo extends Schema.CollectionType {
     singularName: 'locale-info';
     pluralName: 'locale-infos';
     displayName: 'Locale_Info';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -893,7 +893,6 @@ export interface ApiLocaleInfoLocaleInfo extends Schema.CollectionType {
     };
   };
   attributes: {
-    locale: Attribute.String;
     API_Locale: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -907,6 +906,12 @@ export interface ApiLocaleInfoLocaleInfo extends Schema.CollectionType {
         };
       }>;
     DescriptionEN: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Lang_Code: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -932,6 +937,7 @@ export interface ApiLocaleInfoLocaleInfo extends Schema.CollectionType {
       'oneToMany',
       'api::locale-info.locale-info'
     >;
+    locale: Attribute.String;
   };
 }
 

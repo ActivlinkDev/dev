@@ -34,9 +34,6 @@
     },
     "Client_Button": {
       "type": "string"
-    },
-    "Lang_Code": {
-      "type": "string"
     }
   }
 }

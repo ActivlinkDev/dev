@@ -4,7 +4,8 @@
   "info": {
     "singularName": "locale-info",
     "pluralName": "locale-infos",
-    "displayName": "Locale_Info"
+    "displayName": "Locale_Info",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,14 +16,6 @@
     }
   },
   "attributes": {
-    "locale": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "API_Locale": {
       "pluginOptions": {
         "i18n": {
@@ -40,6 +33,14 @@
       "type": "string"
     },
     "DescriptionEN": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "Lang_Code": {
       "pluginOptions": {
         "i18n": {
           "localized": true
