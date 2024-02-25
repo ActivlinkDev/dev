@@ -789,6 +789,7 @@ export interface ApiClientKeyClientKey extends Schema.CollectionType {
     singularName: 'client-key';
     pluralName: 'client-keys';
     displayName: 'Client-Key';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -799,6 +800,7 @@ export interface ApiClientKeyClientKey extends Schema.CollectionType {
     Client_Logo: Attribute.Media;
     Client_Primary: Attribute.String;
     Client_Button: Attribute.String;
+    Lang_Code: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
